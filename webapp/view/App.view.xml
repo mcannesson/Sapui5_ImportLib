@@ -1,0 +1,17 @@
+<mvc:View controllerName="fr.mca.importlib.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    height="100%"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f">
+    <App id="app"
+        busy="{appModel>/busy}"
+        busyIndicatorDelay="{appModel>/delay}">
+        <Page id="page"
+            showHeader="false">
+            <f:FlexibleColumnLayout id="layout"
+                layout="{appModel>/layout}"
+                backgroundDesign="Translucent"/>
+        </Page>
+    </App>
+</mvc:View>

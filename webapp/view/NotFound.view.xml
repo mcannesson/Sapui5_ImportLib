@@ -1,0 +1,10 @@
+<mvc:View controllerName="fr.mca.importlib.controller.NotFound"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <IllustratedMessage id="page"
+        enableVerticalResponsiveness="true"
+        illustrationType="sapIllus-PageNotFound">
+    </IllustratedMessage>
+
+</mvc:View>

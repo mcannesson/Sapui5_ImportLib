@@ -1,0 +1,133 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "fr.mca.importlib",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.13.1",
+      "toolsId": "bd8c14b2-08da-4a87-9412-b8c1d7985682"
+    },
+    "dataSources": {},
+    "crossNavigation": {
+      "inbounds": {
+        "frmcaimportlib-inbound": {
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          },
+          "semanticObject": "ImportLib",
+          "action": "manage",
+          "title": "{{Launchpad.Title}}",
+          "subTitle": "",
+          "icon": "sap-icon://display"
+        }
+      }
+    }
+  },
+  "sap.platform.cf": {
+    "ui5VersionNumber": "1.120.x"
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "fullWidth": true
+  },
+  "sap.ui5": {
+    "handleValidation": true,
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.19",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {},
+        "sap.suite.ui.commons": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "fr.mca.importlib.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "fr.mca.importlib.view",
+        "controlAggregation": "beginColumnPages",
+        "controlId": "layout",
+        "bypassed": {
+          "target": ["notFound"]
+        }
+      },
+      "routes": [
+        {
+          "name": "main",
+          "pattern": "",
+          "target": ["main"]
+        }
+      ],
+      "targets": {
+        "main": {
+          "viewId": "Main",
+          "viewName": "Main",
+          "viewLevel": 1
+        },
+        "notFound": {
+          "viewName": "NotFound",
+          "viewId": "notFound"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "fr.mca.importlib.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "frmcaimportlib"
+  }
+}
